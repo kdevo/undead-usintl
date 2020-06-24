@@ -34,8 +34,7 @@ Under Windows, there is no pre-defined magic layout for `nodeadkeys` and that is
 Consequently, we have to build it manually. One upside is that Microsoft provides a free tool named "Keyboard Layout Creator" for this purpose.
 
 I searched GitHub and hurray - luckily, user @umanovskis already created one and provides...
-> [...] a layout that is like United States-International but removes the apostrophe ('), double quotes ("), circumflex (^), backtick (``) and tilde (~) as dead keys, while leaving the AltGr dead key combinations intact.
-from [README](./layouts/us-intl-nodeadkeys/README.md)
+> [...] a layout that is like United States-International but removes the apostrophe ('), double quotes ("), circumflex (^), backtick (``) and tilde (~) as dead keys, while leaving the AltGr dead key combinations intact. (See [README](./layouts/usintl-undead/README.md)
 
 That's exactly what we want! I forked the repo to achieve three additional goals:
 
@@ -59,4 +58,4 @@ That's what this repository is all about.
 
 ## Further information
 
-To see a comparison between the original "United States-International" and the undead/nodeadkeys version, call `less -R layouts/usintl-undead/diff.txt`.
+To see a comparison between the original "United States-International" and the undead/nodeadkeys version for instance in your **Git Bash**, simply call `less -R layouts/usintl-undead/diff.txt`. I dumped a `git diff` saving the respective files as UTF-8 before.
