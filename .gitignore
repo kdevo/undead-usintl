@@ -1,0 +1,6 @@
+*.exe
+*.zip
+*.msi
+extracted/
+msklc/
+build/

@@ -1,0 +1,135 @@
+[1mdiff --git a/diff/test.klc b/diff/us_international_no_dead_keys.klc[m
+[1mindex 0279f00..51cac61 100644[m
+[1m--- a/diff/test.klc[m
+[1m+++ b/diff/us_international_no_dead_keys.klc[m
+[36m@@ -1,8 +1,8 @@[m
+[31m-KBD	usintl	"United States-International - Origin"[m
+[32m+[m[32mKBD	USIntGr	"United States-International - AltGr - No Dead Keys"[m
+ [m
+[31m-COPYRIGHT	"(c) 2020 Company"[m
+[32m+[m[32mCOPYRIGHT	"(c) 2017 Daniels Umanovskis"[m
+ [m
+[31m-COMPANY	"Company"[m
+[32m+[m[32mCOMPANY	"Daniels Umanovskis"[m
+ [m
+ LOCALENAME	"en-US"[m
+ [m
+[36m@@ -28,7 +28,7 @@[m [mLAYOUT		;an extra '@' at the end is a dead key[m
+ 04	3		0	3	0023	-1	00b3	-1		// DIGIT THREE, NUMBER SIGN, <none>, SUPERSCRIPT THREE, <none>[m
+ 05	4		0	4	0024	-1	00a4	00a3		// DIGIT FOUR, DOLLAR SIGN, <none>, CURRENCY SIGN, POUND SIGN[m
+ 06	5		0	5	0025	-1	20ac	-1		// DIGIT FIVE, PERCENT SIGN, <none>, EURO SIGN, <none>[m
+[31m-07	6		0	6	005e@	-1	00bc	-1		// DIGIT SIX, CIRCUMFLEX ACCENT, <none>, VULGAR FRACTION ONE QUARTER, <none>[m
+[32m+[m[32m07	6		0	6	005e	-1	00bc	-1		// DIGIT SIX, CIRCUMFLEX ACCENT, <none>, VULGAR FRACTION ONE QUARTER, <none>[m
+ 08	7		0	7	0026	-1	00bd	-1		// DIGIT SEVEN, AMPERSAND, <none>, VULGAR FRACTION ONE HALF, <none>[m
+ 09	8		0	8	002a	-1	00be	-1		// DIGIT EIGHT, ASTERISK, <none>, VULGAR FRACTION THREE QUARTERS, <none>[m
+ 0a	9		0	9	0028	-1	2018	-1		// DIGIT NINE, LEFT PARENTHESIS, <none>, LEFT SINGLE QUOTATION MARK, <none>[m
+[36m@@ -57,8 +57,8 @@[m [mLAYOUT		;an extra '@' at the end is a dead key[m
+ 25	K		1	k	K	-1	-1	-1		// LATIN SMALL LETTER K, LATIN CAPITAL LETTER K, <none>, <none>, <none>[m
+ 26	L		5	l	L	-1	00f8	00d8		// LATIN SMALL LETTER L, LATIN CAPITAL LETTER L, <none>, LATIN SMALL LETTER O WITH STROKE, LATIN CAPITAL LETTER O WITH STROKE[m
+ 27	OEM_1		0	003b	003a	-1	00b6	00b0		// SEMICOLON, COLON, <none>, PILCROW SIGN, DEGREE SIGN[m
+[31m-28	OEM_7		0	0027@	0022@	-1	00b4	00a8		// APOSTROPHE, QUOTATION MARK, <none>, ACUTE ACCENT, DIAERESIS[m
+[31m-29	OEM_3		0	0060@	007e@	-1	-1	-1		// GRAVE ACCENT, TILDE, <none>, <none>, <none>[m
+[32m+[m[32m28	OEM_7		0	0027	0022	-1	00b4	00a8		// APOSTROPHE, QUOTATION MARK, <none>, ACUTE ACCENT, DIAERESIS[m
+[32m+[m[32m29	OEM_3		0	0060	007e	-1	-1	-1		// GRAVE ACCENT, TILDE, <none>, <none>, <none>[m
+ 2b	OEM_5		0	005c	007c	001c	00ac	00a6		// REVERSE SOLIDUS, VERTICAL LINE, INFORMATION SEPARATOR FOUR, NOT SIGN, BROKEN BAR[m
+ 2c	Z		5	z	Z	-1	00e6	00c6		// LATIN SMALL LETTER Z, LATIN CAPITAL LETTER Z, <none>, LATIN SMALL LETTER AE (ash) *, LATIN CAPITAL LETTER AE (ash) *[m
+ 2d	X		1	x	X	-1	-1	-1		// LATIN SMALL LETTER X, LATIN CAPITAL LETTER X, <none>, <none>, <none>[m
+[36m@@ -75,78 +75,6 @@[m [mLAYOUT		;an extra '@' at the end is a dead key[m
+ 53	DECIMAL	0	002e	002e	-1	-1	-1		// FULL STOP, FULL STOP, , , [m
+ [m
+ [m
+[31m-DEADKEY	005e[m
+[31m-[m
+[31m-0061	00e2	// a -> â[m
+[31m-0065	00ea	// e -> ê[m
+[31m-0075	00fb	// u -> û[m
+[31m-0069	00ee	// i -> î[m
+[31m-006f	00f4	// o -> ô[m
+[31m-0041	00c2	// A -> Â[m
+[31m-0045	00ca	// E -> Ê[m
+[31m-0055	00db	// U -> Û[m
+[31m-0049	00ce	// I -> Î[m
+[31m-004f	00d4	// O -> Ô[m
+[31m-0020	005e	//   -> ^[m
+[31m-[m
+[31m-DEADKEY	0027[m
+[31m-[m
+[31m-0063	00e7	// c -> ç[m
+[31m-0061	00e1	// a -> á[m
+[31m-0065	00e9	// e -> é[m
+[31m-0075	00fa	// u -> ú[m
+[31m-0069	00ed	// i -> í[m
+[31m-0079	00fd	// y -> ý[m
+[31m-006f	00f3	// o -> ó[m
+[31m-0043	00c7	// C -> Ç[m
+[31m-0041	00c1	// A -> Á[m
+[31m-0045	00c9	// E -> É[m
+[31m-0055	00da	// U -> Ú[m
+[31m-0049	00cd	// I -> Í[m
+[31m-0059	00dd	// Y -> Ý[m
+[31m-004f	00d3	// O -> Ó[m
+[31m-0020	0027	//   -> '[m
+[31m-[m
+[31m-DEADKEY	0022[m
+[31m-[m
+[31m-0061	00e4	// a -> ä[m
+[31m-0065	00eb	// e -> ë[m
+[31m-0075	00fc	// u -> ü[m
+[31m-0069	00ef	// i -> ï[m
+[31m-0079	00ff	// y -> ÿ[m
+[31m-006f	00f6	// o -> ö[m
+[31m-0041	00c4	// A -> Ä[m
+[31m-0045	00cb	// E -> Ë[m
+[31m-0055	00dc	// U -> Ü[m
+[31m-0049	00cf	// I -> Ï[m
+[31m-004f	00d6	// O -> Ö[m
+[31m-0020	0022	//   -> "[m
+[31m-[m
+[31m-DEADKEY	0060[m
+[31m-[m
+[31m-0061	00e0	// a -> à[m
+[31m-0065	00e8	// e -> è[m
+[31m-0075	00f9	// u -> ù[m
+[31m-0069	00ec	// i -> ì[m
+[31m-006f	00f2	// o -> ò[m
+[31m-0041	00c0	// A -> À[m
+[31m-0045	00c8	// E -> È[m
+[31m-0055	00d9	// U -> Ù[m
+[31m-0049	00cc	// I -> Ì[m
+[31m-004f	00d2	// O -> Ò[m
+[31m-0020	0060	//   -> `[m
+[31m-[m
+[31m-DEADKEY	007e[m
+[31m-[m
+[31m-006e	00f1	// n -> ñ[m
+[31m-0061	00e3	// a -> ã[m
+[31m-006f	00f5	// o -> õ[m
+[31m-004e	00d1	// N -> Ñ[m
+[31m-0041	00c3	// A -> Ã[m
+[31m-004f	00d5	// O -> Õ[m
+[31m-0020	007e	//   -> ~[m
+[31m-[m
+[31m-[m
+ KEYNAME[m
+ [m
+ 01	Esc[m
+[36m@@ -226,18 +154,9 @@[m [mKEYNAME_EXT[m
+ 5c	"Right Windows"[m
+ 5d	Application[m
+ [m
+[31m-KEYNAME_DEAD[m
+[31m-[m
+[31m-005e	"CIRCUMFLEX ACCENT"[m
+[31m-0027	"APOSTROPHE"[m
+[31m-0022	"QUOTATION MARK"[m
+[31m-0060	"GRAVE ACCENT"[m
+[31m-007e	"TILDE"[m
+[31m-[m
+[31m-[m
+ DESCRIPTIONS[m
+ [m
+[31m-0409	United States-International - Origin[m
+[32m+[m[32m0409	United States-International - AltGr - No Dead Keys[m
+ LANGUAGENAMES[m
+ [m
+ 0409	English (United States)[m
