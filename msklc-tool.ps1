@@ -86,13 +86,16 @@ function Package([string] $Name, [string]$BuildDir = $BUILD_DIR) {
     # TODO(kdevo): Provide simple one-file installer PS script with binaries
 }
 
+# TODO(kdinghofer): Refactor param to metadata object
 function Install([string] $DLL, [string] $BuildDir = $BUILD_DIR) {
+
     $path = "HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layouts\c0010409" 
     $dllDest = "%SystemRoot%\System32\$DLL"
     $productId = "{$(New-Guid)}".ToUpper()
+    $description = (Get-ItemProperty "$DLL").VersionInfo.FileDescription
 
     New-Item -Path $path -Force
-    New-ItemProperty -Path $path -Name "Layout Text" -Value "United States-International ESC" -Force
+    New-ItemProperty -Path $path -Name "Layout Text" -Value "$description" -Force
     New-ItemProperty -Path $path -Name "Layout File" -Value "$DLL" -Force
     New-ItemProperty -Path $path -Name "Layout Product Code" -Value "$($productId)"  -Force
     New-ItemProperty -Path $path -Name "Layout Id" -Value "00c0" -Force
